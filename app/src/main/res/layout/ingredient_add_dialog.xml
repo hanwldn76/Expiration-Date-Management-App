@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="재료 이름"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"></TextView>
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/name"></EditText>
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="유통기한"
+        app:layout_constraintTop_toBottomOf="@+id/edtName"></TextView>
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:datePickerMode="spinner"
+        android:spinnersShown="true"
+        android:calendarViewShown="false"
+        app:layout_constraintTop_toBottomOf="@+id/date"
+        tools:ignore="MissingConstraints"></DatePicker>
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="재료 종류"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker"></TextView>
+    <RadioGroup
+        android:id="@+id/rdoGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/category">
+        <RadioButton
+            android:id="@+id/rdoBtn1"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:text="유제품"
+            app:layout_constraintTop_toBottomOf="@+id/category"></RadioButton>
+        <RadioButton
+            android:id="@+id/rdoBtn2"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:text="육류"
+            app:layout_constraintTop_toBottomOf="@+id/rdoBtn1"></RadioButton>
+        <RadioButton
+            android:id="@+id/rdoBtn3"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:text="수산물"
+            app:layout_constraintTop_toBottomOf="@+id/rdoBtn2"></RadioButton>
+        <RadioButton
+            android:id="@+id/rdoBtn4"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:text="간편식품류"
+            app:layout_constraintTop_toBottomOf="@+id/rdoBtn3"></RadioButton>
+        <RadioButton
+            android:id="@+id/rdoBtn5"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:text="과일,채소"
+            app:layout_constraintTop_toBottomOf="@+id/rdoBtn4"></RadioButton>
+    </RadioGroup>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
